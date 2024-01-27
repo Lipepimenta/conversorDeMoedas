@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Conversor de moedas</h1>
+    </div>
+
+    <section class="conversor-section">
+        <img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png" alt="Imagem de Conversão">
+        <p id="mensagemConversao"></p>
+
+        <div class="select-container">
+            <label for="listaMoedas">Escolha a moeda:</label>
+            <select name="listaMoedas" id="listaMoedas" onchange="atualizaLista();">
+                <option value="dolarEUA">Dolar Americano</option>
+                <option value="dolarAU">Dolar Australiano</option>
+                <option value="euro">Euro</option>
+                <option value="libra">Libra</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <label for="valorEmReal">Digite o valor em reais (R$):</label>
+            <input type="text" id="valorEmReal" name="valorEmReal" title="Real" class="text" placeholder="Valor em reais(R$)" oninput="calcular();">
+        </div>
+
+        <div class="input-container">
+            <label for="resultado">Resultado:</label>
+            <input type="text" id="resultado" name="resultado" title="Resultado" class="text" placeholder="Resultado" readonly>
+        </div>
+    </section>
+</body>
+</html>
