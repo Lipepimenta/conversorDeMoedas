@@ -1,70 +1,86 @@
 body {
-    font-family: "Roboto Mono", monospace;
-    text-align: center;
-    background-image: url("https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Background.png");
-    background-color: #000000;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    height: 100vh;
-    margin: 0; /* Removendo margens padrão do body */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
 
-  .container {
-    margin-bottom: 20px;
-  }
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-  .conversor-section {
-    max-width: 600px;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+header h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
-  img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
+.moeda {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-  .select-container,
-  .input-container {
-    margin-bottom: 15px;
-    text-align: left;
-  }
+.entrada,
+.selecao {
+  flex: 1;
+  margin-right: 10px;
+}
 
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333333;
-  }
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
 
-  select,
-  input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+}
 
-  input.text[readonly] {
-    background-color: #f5f5f5;
-  }
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  #mensagemConversao {
-    color: #333333;
-    font-size: 16px;
-    margin-bottom: 15px;
-  }
+button:hover {
+  background-color: #0056b3;
+}
 
-  #resultado {
-    font-weight: bold;
-  }
+.resultado {
+  margin-top: 20px;
+}
+
+#valor-destino {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+#atualizacao {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
