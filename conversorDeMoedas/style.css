@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 500px; /* aumentando a largura do container */
   margin: 50px auto;
   padding: 20px;
   background-color: #fff;
@@ -17,70 +17,85 @@ body {
 
 header h1 {
   color: #333;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 32px; /* aumentando o tamanho do título */
+  margin-bottom: 30px; /* espaço extra para separar o título */
 }
 
 .moeda {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* espaço extra entre as seções */
 }
 
 .entrada,
 .selecao {
   flex: 1;
-  margin-right: 10px;
+  margin-right: 20px; /* aumentando o espaço entre os campos */
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px; /* reduzindo a margem inferior dos rótulos */
   color: #666;
 }
 
 input[type="number"],
 select {
-  width: 100%;
-  padding: 12px;
+  width: calc(100% - 24px); /* ajustando a largura para acomodar a margem */
+  padding: 16px; /* aumentando o preenchimento */
   box-sizing: border-box;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 8px; /* aumentando o raio da borda */
+  font-size: 18px; /* aumentando o tamanho da fonte */
   color: #333;
   background-color: #f9f9f9;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
 .resultado {
-  margin-top: 20px;
+  margin-top: 30px;
+  text-align: left; /* Alinhando o texto à esquerda */
+}
+
+#resultado-container {
+  display: inline-block; /* Garantindo que os elementos estejam em linha */
+}
+
+#valor-destino,
+#atualizacao {
+  display: inline-block; /* Definindo como elementos em linha */
 }
 
 #valor-destino {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   color: #333;
+  margin-bottom: 10px; /* Adicionando espaço extra abaixo do resultado */
 }
 
 #atualizacao {
-  display: block;
-  margin-top: 10px;
   font-size: 14px;
   color: #666;
+  border: 1px solid #ccc; /* Adicionando borda */
+  border-radius: 8px; /* Arredondando as bordas */
+  padding: 10px; /* Adicionando preenchimento */
+  margin-top: 10px; /* Adicionando espaço extra acima do texto de atualização */
+}
+
+/* Ajustando estilos para o botão */
+button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Adicionando espaço extra acima do botão */
+}
+
+button:hover {
+  background-color: #0056b3;
 }
